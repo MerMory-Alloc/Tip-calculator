@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+:root{
+  --Strong-cyan: hsl(172, 67%, 45%);
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+  --red: #ff5252;
+}
+
+*,::after,::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-family: 'Space Mono', monospace;
+  font-size: 24px;
+}
+
+body{
+  background-color: var(--Light-grayish-cyan);
+}
+
+.logo{
+  width: 100%;
+  max-width: 90px;
+  margin: 3rem auto;
+  display: block;
+}
+
+.parent_container{
+  background-color: var(--White);
+  padding: 1.5rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+h1,h2{
+  display: none;
+}
+
+.subtitle{
+  font-size: 0.75rem;
+  color: var(--Dark-grayish-cyan);
+  margin-bottom: 0.5rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.in{
+  font-size: 1rem;
+  background-color: var(--Very-light-grayish-cyan);
+  border: none;
+  width: 100%;
+  color: var(--Very-dark-cyan);
+  font-family: inherit;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  direction:RTL;
+  text-align: right;
+  -moz-appearance: textfield;
+  outline-color: var(--Strong-cyan);
+}
+
+.in::placeholder{
+  color: var(--Grayish-cyan);
+}
+
+.in_to_margin,.tip_amount_cont{
+  margin-bottom: 1.5rem;
+}
+
+.in_label{
+  position: relative;
+}
+
+.in_icon{
+  position: absolute;
+  top:0.4rem;
+  left: 0.5rem;
+}
+
+.red_label::before{
+  content: "Can't be zero";
+  position: absolute;
+  right:0;
+  top:-2rem;
+  font-size: 0.7rem;
+  color: var(--red);
+}
+
+.cust::placeholder {
+   text-align: center;
+  color: var(--Dark-grayish-cyan);
+}
+
+.tip_amount_cont{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap:1rem;
+}
+
+.tip_amount{
+  background-color: var(--Very-dark-cyan);
+  cursor: pointer;
+  border-radius: 0.3rem;
+  text-align: center;
+  padding: 0.5rem;
+  color: var(--Very-light-grayish-cyan);
+  transition: background-color .3s;
+}
+
+.checked{
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+}
+
+.hov:hover{
+  background-color: var(--Light-grayish-cyan);
+  color: var(--Very-dark-cyan);
+}
+
+.result_cont{
+  background-color: var(--Very-dark-cyan);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.result_tip_am_cont{
+  display: flex;
+  margin-top: 0.5rem;
+  align-items: center;
+}
+
+.item{
+  flex-basis: 100%;
+}
+
+.res_subject{
+  font-size: 0.75rem;
+  color: var(--Very-light-grayish-cyan);
+}
+
+.disp_res{
+  font-size: 2rem;
+  color: var(--Strong-cyan);
+  text-align: right;
+}
+
+.ti{
+  display: block;
+  color: var(--Grayish-cyan);
+  font-size: 0.67rem;
+}
+
+.reset_btn:disabled{
+  cursor: default;
+  filter: contrast(50%) opacity(30%);
+}
+
+.reset_btn:focus, .reset_btn:active{
+  outline: none;
+}
+
+.reset_btn{
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 1.5rem;
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+  font-size: 1rem;
+  font-family: inherit;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color .3s;
+}
+
+
+.reset_btn:not([disabled]):hover{
+  background-color: var(--Light-grayish-cyan);
+}
+
+
+
+
+@media only screen and (min-width:960px) {
+  main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+  }
+
+  .logo{
+    margin-top: 0;
+    margin-bottom: 3rem;
+  }
+
+  .parent_container{
+    display: flex;
+    padding: 1rem 1rem 0 1rem;
+    border-radius: 1.5rem;
+    max-width: 1080px;
+    margin: auto;
+    box-shadow: 1rem;
+  }
+
+  .input_cont{
+    flex-basis: 100%;
+    padding: 0.5rem 1rem 0 1rem;
+    margin-right: 1rem;
+  }
+
+  .result_cont{
+    flex-basis: 100%;
+    margin-bottom: 1rem;
+    position: relative;
+    border-radius: 0.7rem;
+  }
+
+  .tip_amount_cont{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .reset_btn{
+    position: absolute;
+    bottom: 1.5rem;
+    width: 86%;
+    margin: auto;
+    left: 0;
+    right: 0;
+  }
+
+}

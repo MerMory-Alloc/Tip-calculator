@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+
+  <main>
+    <h1 aria-hidden="true">Tip calculator</h1>
+    <img class="logo" src="./images/logo.svg" alt="">
+    <div class="parent_container">
+      <div class="input_cont">
+        <h2 aria-hidden="true">input field</h2>
+        <div class="bill">
+          <h3 class="subtitle">Bill</h3>
+          <label for="bill" class="in_label">
+            <img class="in_icon" src="./images/icon-dollar.svg" alt="">
+            <input id="bill" type="number" name="bill" class="bill in in_to_margin" placeholder="0" min="0">
+          </label>
+        </div>
+
+        <div class="select_tip">
+          <h3 class="subtitle">Select Tip %</h3>
+          <div class="tip_amount_cont">
+            <div class="tip_amount hov">5%</div>
+            <div class="tip_amount hov">10%</div>
+            <div class="tip_amount hov">15%</div>
+            <div class="tip_amount hov">25%</div>
+            <div class="tip_amount hov">50%</div>
+            <input type="number" id="cust" name="cust" class="in cust" placeholder="Custom" min="0">
+          </div>
+        </div>
+
+        <div class="nbr_of_ppl">
+          <h3 class="subtitle">Number of People</h3>
+          <label for="prsn" class="in_label">
+            <img class="in_icon" src="./images/icon-person.svg" alt="">
+
+            <input type="number" id="prsn" name="prsn" class="prsn in in_to_margin" placeholder="0" min="1">
+          </label>
+        </div>
+
+      </div>
+
+      <div class="result_cont">
+        <h2 aria-hidden="true">result field</h2>
+        <div class="result_tip_am_cont">
+          <h3 class="res_subject item">Tip Amount <span class="ti">/ person</span></h3>
+          <p class="disp_res item" id="tip_amount_per_person">$0.00</p>
+        </div>
+
+        <div class="result_tip_am_cont">
+          <h3 class="res_subject item">Total<span class="ti">/ person</span></h3>
+          <p class="disp_res item" id="total">$0.00</p>
+        </div>
+
+        <button disabled class="reset_btn" id="reset_btn" type="button" name="button">Reset</button>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
